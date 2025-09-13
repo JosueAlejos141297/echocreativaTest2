@@ -30,6 +30,30 @@
         transform: translateY(-2px);
         color: #DE1A80;
     }
+    
+    /* Estilos para el efecto de los servicios */
+    .service-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        background-color: #f7f7f7; /* Un color de fondo sutil al pasar el mouse */
+    }
+
+    .service-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease;
+        opacity: 0;
+    }
+
+    .service-card.expanded .service-description {
+        max-height: 200px; /* Suficientemente grande para cualquier descripción */
+        opacity: 1;
+        margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -55,42 +79,73 @@
       Ofrecemos un catálogo de servicios que combina las mejores prácticas del marketing digital con el poder de la Inteligencia Artificial para asegurar que tu marca no solo sea visible, sino que también crezca de forma inteligente.
     </p>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-laptop-code color-17afa1 text-4xl mt-1"></i>
-        <div>
-          <p class="font-semibold text-lg">Desarrollo Web y Tiendas en línea</p>
-          <p class="text-sm color-796489">Páginas corporativas, e-commerce y landing pages que convierten.</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg service-card cursor-pointer">
+        <div class="flex items-start space-x-4">
+          <i class="fas fa-laptop-code color-17afa1 text-4xl mt-1"></i>
+          <div>
+            <p class="font-semibold text-lg">Desarrollo Web y Tiendas en línea</p>
+            <p class="text-sm color-796489">Páginas corporativas, e-commerce y landing pages que convierten.</p>
+          </div>
+        </div>
+        <div class="service-description">
+          <p class="text-sm text-gray-600 mt-4">
+            Construimos sitios web y tiendas en línea con diseños responsivos, fáciles de navegar y optimizados para la conversión. Usamos las últimas tecnologías para garantizar un rendimiento excepcional y una experiencia de usuario fluida, desde sitios informativos hasta complejos e-commerce.
+          </p>
         </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-bullhorn color-17afa1 text-4xl mt-1"></i>
-        <div>
-          <p class="font-semibold text-lg">Publicidad Digital (Ads) y Redes Sociales</p>
-          <p class="text-sm color-796489">Creación de campañas segmentadas en Facebook, Instagram y Google que optimizan tu inversión y ROI.</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg service-card cursor-pointer">
+        <div class="flex items-start space-x-4">
+          <i class="fas fa-bullhorn color-17afa1 text-4xl mt-1"></i>
+          <div>
+            <p class="font-semibold text-lg">Publicidad Digital (Ads) y Redes Sociales</p>
+            <p class="text-sm color-796489">Creación de campañas segmentadas en Facebook, Instagram y Google que optimizan tu inversión y ROI.</p>
+          </div>
+        </div>
+        <div class="service-description">
+          <p class="text-sm text-gray-600 mt-4">
+            Diseñamos estrategias de publicidad digital en plataformas como Google Ads y Meta (Facebook, Instagram) para llegar a tu público objetivo con mensajes precisos. Nuestro enfoque basado en datos maximiza el retorno de la inversión y aumenta la visibilidad de tu marca de manera efectiva.
+          </p>
         </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-search color-17afa1 text-4xl mt-1"></i>
-        <div>
-          <p class="font-semibold text-lg">SEO & SEM (Posicionamiento Web)</p>
-          <p class="text-sm color-796489">Estrategias de palabras clave y contenido optimizado para que te encuentren en Google.</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg service-card cursor-pointer">
+        <div class="flex items-start space-x-4">
+          <i class="fas fa-search color-17afa1 text-4xl mt-1"></i>
+          <div>
+            <p class="font-semibold text-lg">SEO & SEM (Posicionamiento Web)</p>
+            <p class="text-sm color-796489">Estrategias de palabras clave y contenido optimizado para que te encuentren en Google.</p>
+          </div>
+        </div>
+        <div class="service-description">
+          <p class="text-sm text-gray-600 mt-4">
+            Mejoramos tu ranking en los motores de búsqueda a través de técnicas de SEO on-page y off-page. Analizamos palabras clave relevantes y creamos contenido de valor para atraer tráfico orgánico de calidad, asegurando que tu negocio sea la primera opción para tus clientes potenciales.
+          </p>
         </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fab fa-google color-17afa1 text-4xl mt-1"></i>
-        <div>
-          <p class="font-semibold text-lg">Perfil de negocio en Google</p>
-          <p class="text-sm color-796489">Nos encargamos de mantener la información de tu negocio precisa y actualizada.</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg service-card cursor-pointer">
+        <div class="flex items-start space-x-4">
+          <i class="fab fa-google color-17afa1 text-4xl mt-1"></i>
+          <div>
+            <p class="font-semibold text-lg">Perfil de negocio en Google</p>
+            <p class="text-sm color-796489">Mantenemos la información de tu negocio precisa y actualizada.</p>
+          </div>
+        </div>
+        <div class="service-description">
+          <p class="text-sm text-gray-600 mt-4">
+            Gestionamos y optimizamos tu perfil de negocio en Google para aumentar tu visibilidad local. Nos encargamos de mantener la información de contacto, horarios y fotos actualizadas, responder a reseñas y publicar novedades para captar a clientes cercanos a tu ubicación.
+          </p>
         </div>
       </div>
     </div>
     <div class="text-center mt-12">
-   <div class="text-center mt-8">
       <a href="diferenciales.html" class="bg-purple-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-500 transition">¡Hablemos de tu proyecto!</a>
     </div>
   </section>
 
   <script>
+    // Script para el menú de navegación
     const btn = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
     btn.addEventListener("click", () => {
@@ -105,7 +160,16 @@
       menu.classList.toggle("space-y-4");
       menu.classList.toggle("p-6");
     });
+
+    // Script para el efecto de los servicios
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('expanded');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('expanded');
+        });
+    });
   </script>
 </body>
-
 </html>
