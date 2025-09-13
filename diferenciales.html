@@ -30,13 +30,22 @@
         transform: translateY(-2px);
         color: #DE1A80;
     }
+
+    /* Animación para las tarjetas de diferenciales */
+    .diferencial-card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .diferencial-card-hover:hover {
+        transform: translateY(-5px); /* Efecto de elevación */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra más prominente */
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <nav class="bg-431a60 text-white px-6 py-4 flex justify-between items-center relative">
   <a href="index.html" class="flex items-center">
-      <img src="logox.png" alt="EchoCreativa Logo" class="h-9">
+      <img src="logox.png" alt="Echo Creativa Logo" class="h-9">
     </a>
     <button id="menu-btn" class="lg:hidden block focus:outline-none text-2xl">☰</button>
     <ul id="menu" class="hidden lg:flex space-x-6 font-semibold">
@@ -55,29 +64,29 @@
       En un mercado saturado de agencias tradicionales y freelancers, nuestra ventaja competitiva es clara: combinamos la estrategia humana con el poder de la Inteligencia Artificial para ofrecerte un valor sin precedentes.
     </p>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-check-circle color-17afa1 text-3xl"></i>
+      <div class="bg-white p-6 rounded-lg shadow-lg diferencial-card-hover flex items-start space-x-4">
+        <i class="fas fa-award color-17afa1 text-3xl"></i>
         <div>
           <p class="font-semibold text-lg">Más de 3 años de experiencia</p>
           <p class="color-796489 text-sm">Conocemos a fondo el mercado y las necesidades específicas de pymes y emprendedores.</p>
         </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-check-circle color-17afa1 text-3xl"></i>
+      <div class="bg-white p-6 rounded-lg shadow-lg diferencial-card-hover flex items-start space-x-4">
+        <i class="fas fa-chart-line color-17afa1 text-3xl"></i>
         <div>
           <p class="font-semibold text-lg">Resultados medibles</p>
           <p class="color-796489 text-sm">Nos enfocamos en el ROI (Retorno de Inversión) para que veas el crecimiento en tus ingresos y no solo en tus likes.</p>
         </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-check-circle color-17afa1 text-3xl"></i>
+      <div class="bg-white p-6 rounded-lg shadow-lg diferencial-card-hover flex items-start space-x-4">
+        <i class="fas fa-lightbulb color-17afa1 text-3xl"></i>
         <div>
           <p class="font-semibold text-lg">Especialistas en pymes y emprendedores</p>
           <p class="color-796489 text-sm">Ofrecemos soluciones a la medida, entendiendo las limitaciones y oportunidades de tu negocio.</p>
         </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex items-start space-x-4">
-        <i class="fas fa-check-circle color-17afa1 text-3xl"></i>
+      <div class="bg-white p-6 rounded-lg shadow-lg diferencial-card-hover flex items-start space-x-4">
+        <i class="fas fa-handshake color-17afa1 text-3xl"></i>
         <div>
           <p class="font-semibold text-lg">Soporte y acompañamiento constante</p>
           <p class="color-796489 text-sm">Estamos contigo en cada paso, desde la estrategia inicial hasta el logro de tus objetivos.</p>
@@ -106,5 +115,4 @@
     });
   </script>
 </body>
-
 </html>
