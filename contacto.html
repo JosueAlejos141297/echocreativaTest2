@@ -30,13 +30,28 @@
         transform: translateY(-2px);
         color: #DE1A80;
     }
+
+    /* Animación para las tarjetas de contacto */
+    .contact-card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card-hover:hover {
+        transform: translateY(-5px); /* Efecto de elevación */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra más prominente */
+    }
+
+    /* Estilo del foco para los inputs */
+    .focus\:ring-431a60:focus {
+        --tw-ring-color: #431A60;
+    }
+    
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <nav class="bg-431a60 text-white px-6 py-4 flex justify-between items-center relative">
    <a href="index.html" class="flex items-center">
-      <img src="logox.png" alt="EchoCreativa Logo" class="h-9">
+      <img src="logox.png" alt="Echo Creativa Logo" class="h-9">
     </a>
     <button id="menu-btn" class="lg:hidden block focus:outline-none text-2xl">☰</button>
     <ul id="menu" class="hidden lg:flex space-x-6 font-semibold">
@@ -56,20 +71,20 @@
     </p>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <a href="https://www.echocreativa.com.mx" target="_blank" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+      <a href="https://www.echocreativa.com.mx" target="_blank" class="bg-white p-6 rounded-lg shadow-lg contact-card-hover flex flex-col items-center">
         <i class="fas fa-globe color-17afa1 text-4xl mb-2"></i>
         <p class="font-semibold text-lg">www.echocreativa.com.mx</p>
       </a>
-      <a href="mailto:info@echocreativa.com.mx" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+      <a href="mailto:echocreativa@gmail.com" class="bg-white p-6 rounded-lg shadow-lg contact-card-hover flex flex-col items-center">
         <i class="fas fa-envelope color-17afa1 text-4xl mb-2"></i>
         <p class="font-semibold text-lg">echocreativa@gmail.com</p>
       </a>
-      <a href="https://wa.me/525525017370" target="_blank" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+      <a href="https://wa.me/525525017370" target="_blank" class="bg-white p-6 rounded-lg shadow-lg contact-card-hover flex flex-col items-center">
         <i class="fab fa-whatsapp color-17afa1 text-4xl mb-2"></i>
         <p class="font-semibold text-lg">WhatsApp</p>
         <p class="font-semibold text-lg">55 2501 7370</p>
       </a>
-      <a href="https://www.facebook.com/echocreativa" target="_blank" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+      <a href="https://www.facebook.com/echocreativa" target="_blank" class="bg-white p-6 rounded-lg shadow-lg contact-card-hover flex flex-col items-center">
         <i class="fab fa-facebook color-17afa1 text-4xl mb-2"></i>
         <p class="font-semibold text-lg">Facebook</p>
 	<p class="font-semibold text-sm color-black">@echocreativa</p>
@@ -143,5 +158,4 @@
     });
   </script>
 </body>
-
 </html>
